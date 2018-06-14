@@ -13,5 +13,5 @@ fun main(args: Array<String>) {
     val accessNo = readLine()?:""
     val featureStr = readLine()?:""
     val resutl = list.matchAccessNo(accessNo).matchFeatureStr(featureStr)
-    println(resutl?.seq ?: "")
+    println(resutl?.seq ?: "匹配失败!!!")
 }
