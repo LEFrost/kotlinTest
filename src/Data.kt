@@ -36,12 +36,12 @@ fun String.fuzzy(target: String): Boolean {
     var i = 0
     while (i < max) {
         if (this[i] != first)
-            while (++i < max && this[i] != first);
+            while (++i < max && this[i] != first);//源字符串中寻找与目标字符串第一个匹配的位置
         if (i <= max) {
             var j = i + 1
             val end = i + target.length
             var k = 1
-            while (j < end && this[j] == target[k]) {
+            while (j < end && this[j] == target[k]) {//从第一个位置开始匹配到目标字符串末尾
                 j++;k++
             }
             if(j==end){
